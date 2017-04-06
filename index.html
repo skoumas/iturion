@@ -1,0 +1,74 @@
+<!--
+Coded by Georgios Papanikolaou aka skoumas
+www.skoumas.com
+
+Coded mostly for fun.
+Took about a day.
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>iTunion</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation.min.css">
+	<link rel="stylesheet" href="style.css">
+	<!-- JQUERY -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"/></script>
+	<!-- MASONRY BUT NOT A MASON -->
+	<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+	<link rel="shortcut icon" href="favicon.png" />
+</head>
+
+<body>
+ 
+	<!-- TOP NAV -->
+	<div class="table">
+		<div class="cell">
+			<div class="selections">
+				<div data-type="movie" class="selection selection-active">
+					<i class="fa fa-film"></i> Movie
+				</div>
+				<div data-type="podcast" class="selection">
+					<i class="fa fa-film"></i> Podcast
+				</div>
+				<div data-type="musicTrack" class="selection">
+					<i class="fa fa-film"></i> Music Tracks
+				</div>
+				<div data-type="musicVideo" class="selection">
+					<i class="fa fa-film"></i> Music Video
+				</div>
+			</div>
+		</div>
+		<div class="cell hide-small" style="text-align:right; padding-right:20px;"> 
+			<input type="text" placeholder="Your search term goes here..." id="search-text" />
+			<div id="search-icon" style="display:none"><i class="fa fa-search"></i></div>
+			<div id="favorites-icon"><i class="fa fa-heart"></i></div>
+		</div>
+	</div>
+ 
+ 	<!-- THE LOADING -->
+	<div id="loading">
+		<i class="fa fa-spin fa-circle-o-notch fa-4x"></i><br><br>
+		Talking with iTunes
+	</div>
+ 
+	<!-- THE CENTER -->
+	<div class="grid"></div>
+
+	<!-- THE FAVORITES -->
+	<div id="favorites">
+		<div id="no-favorites">
+			You have no favorites
+		</div>
+		<div id="favorites_inner">
+		</div>
+	</div>
+
+	<!-- THE MAGIC -->
+	<script src="iturion.js"></script>
+	<!-- FONT AWESOME -->
+	<script src="https://use.fontawesome.com/77371a7db6.js"></script>
+</body>
+</html>
